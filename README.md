@@ -1,4 +1,4 @@
-rupor
+Rupor
 =====
 
-Rupor
+Rupor is an open project
