@@ -1,0 +1,26 @@
+@import "../_base/base";
+
+.extJustify {
+    @include ie-justify;
+    line-height: 0;
+
+    @if $ie > 7 {
+        &:after {
+            @include ie-inlineBlock;
+            content: ' ';
+            overflow: hidden;
+            width: 100%;
+            height: 1px;
+        }
+
+    } @else {
+        .after {
+            @include ie-inlineBlock;
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+            height: 1px;
+        }
+
+    }
+}

@@ -1,0 +1,10 @@
+* {zoom:1}
+
+#tags ol > li a {//color:expression(this.parentNode.currentStyle['color'])}
+
+#problem_statement .wrap {
+filter: 
+	progid:DXImageTransform.Microsoft.Shadow(color=#cccccc,direction=-90,strength=15), 
+	progid:DXImageTransform.Microsoft.Shadow(color=#cccccc,direction=90,strength=15), 
+	progid:DXImageTransform.Microsoft.Shadow(color=#cccccc,direction=180,strength=15) 
+}

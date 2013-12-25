@@ -1,0 +1,115 @@
+@import "../_base/base";
+@import "_extend.scss";
+//@import "_extend.scss"; // TODO: for production - remove duplicate
+
+html {
+    height: 100%;
+    min-width: $containerWidth;
+}
+
+body {
+    position: relative;
+    @if $ie < 7 {
+        height: auto !important;
+        height: 100%;
+    }
+    min-height: 100%;
+    background: $colorBackground url('../img/css/bg.jpg') center 0 repeat-x;
+    color: $colorForeground;
+    font-family: $fontBody;
+    font-size: $fontSize;
+    line-height: $fontLineHeight;
+
+    @if $ie > 20 {
+        -webkit-font-smoothing: antialiased !important;
+    }
+}
+
+#wrapper {
+    display: none;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+//textarea:focus,
+//input:focus { outline: none; }
+
+//#fade {
+//    @include opacity(.8);
+//    position: absolute;
+//    top: 0;
+//    left: 0;
+//    width: 100%;
+//    height: 100%;
+//    background: #000;
+//    z-index: 990;
+//    }
+
+input, textarea, th, td {
+    padding: 0;
+}
+
+fieldset {
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+
+a {
+    color: $colorTheme;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+button {
+    cursor: pointer;
+}
+
+@import "_header.scss";
+@import "_main.scss";
+@import "_footer.scss";
+
+/*******************************************************************************
+ global rules
+ *******************************************************************************/
+.g-hidden { display: none; }
+
+.g-invisible {
+    display: block;
+    position: absolute;
+    left: -9999px;
+    top: -9999px;
+    visibility: hidden;
+}
+
+/* clearfix */
+// http://css-live.ru/tricks/novaya-alternativa-clearfix-u-i-overflowhidden.html
+.cf {
+    position: relative;
+    display: table;
+
+    &.operaFix100 {
+        width: 100%;
+    }
+}
+
+.cf:after {
+    content: '. .';
+    display: block;
+    word-spacing: 99in;
+    height: 0;
+    overflow: hidden;
+
+    /* Opera bugfix*/
+    font-size: 0.05em;
+    //font: .13em/0 sans-serif;
+    line-height: 0.05em;
+}
+
+@if $ie < 8 {
+/* Clearfix for IE 6/7 (trigger hasLayout) */
+    .cf { zoom: 1; }
+}

@@ -1,0 +1,44 @@
+// config
+$isResponsive: false;
+$isInlineImages: true;
+$piePath: '/PIE.htc';
+$imagesPath: '../img';
+$headerLogo: '#{$imagesPath}/css/logo.png';
+
+// fallback
+@if $ie < 8 { $isInlineImages: false; }
+
+
+//dimensions
+$containerWidth: 954px;
+$containerMinWidth: 960px;
+$containerMaxWidth: 1400px;
+$insideWidth: 882px;
+
+$headerHeight: 415px;
+$footerHeight: 40px;
+
+$mainWidth: 80%;
+$sidebarWidth: 19%;
+
+
+//colors
+$colorBackground: #fff;
+$colorForeground: getHex(#000, .7);
+$colorTheme: #e7642a;
+
+
+// fonts
+$fontSize: 12px;
+$fontLineHeight: 18px;
+$fontBody: Verdana, Arial, Helvetica, sans-serif;
+$fontLight: 'Roboto', $fontBody;
+$fontTimes: Georgia, "Times New Roman", Times, serif;
+
+// sprites
+$spriteMisc : sprite-map('css/sprites/misc/*.png', $position: 0%, $spacing: 100px, $repeat: no-repeat);
+
+@import "compass";
+@import "rgbapng";
+@import "functions";
+@import "mixins";

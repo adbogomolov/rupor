@@ -1,0 +1,1 @@
+<?php $this->widget('application.widgets.FlashMessageWidget', array('htmlOptions'=>array('class'=>'wrapper'), 'id' => 'flash')); ?>

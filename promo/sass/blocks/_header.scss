@@ -1,0 +1,29 @@
+@import "../_base/base";
+//@import "_extend.scss"; // TODO: for production - remove duplicate
+
+/*******************************************************************************
+ header
+ *******************************************************************************/
+.b-header {
+    position: relative;
+    @if ($isResponsive) {
+        min-width: $containerMinWidth;
+        max-width: $containerMaxWidth;
+    } @else {
+        width: $containerWidth;
+    }
+    height: $headerHeight;
+    margin: 0 auto;
+}
+
+@if $headerLogo {
+    .b-header__logo {
+        $file: '#{$imagesPath}/css/logo.png';
+        @include image-dimensions($file);
+        display: block;
+        background: url($file);
+        position: absolute;
+        top: 107px;
+        left: 260px;
+    }
+}

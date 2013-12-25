@@ -1,0 +1,51 @@
+@import "../_base/base";
+//@import "_extend.scss"; // TODO: for production - remove duplicate
+
+/*******************************************************************************
+ * footer
+ *******************************************************************************/
+.i-footer {
+    background: #2d2d2d;
+    color: #fff;
+}
+
+.b-footer {
+    position: relative;
+    @if ($isResponsive) {
+        min-width: $containerMinWidth;
+        max-width: $containerMaxWidth;
+    } @else {
+        width: $containerWidth;
+    }
+    height: $footerHeight;
+    margin: 0 auto;
+    font-size: 12px;
+    line-height: $footerHeight;
+
+    .divider {
+        display: inline-block;
+        margin: 0 25px;
+    }
+}
+
+.b-footer__search {
+    position: absolute;
+    top: 7px;
+    right: 0;
+
+    input {
+        display: block;
+        width: 200px - 20;
+        height: 25px;
+        padding: 0 10px;
+        background: #fff;
+        border: none;
+        border-top: 1px solid #858585;
+        border-right: 1px solid #cbcbcb;
+        font-size: 12px;
+
+        @if $ie < 9 {
+            line-height: 25px;
+        }
+    }
+}

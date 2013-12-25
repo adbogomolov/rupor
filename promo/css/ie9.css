@@ -1,0 +1,317 @@
+/* normalize.css v2.1.2 | MIT License | git.io/normalize */
+/* ========================================================================== HTML5 display definitions ========================================================================== */
+/** Correct `block` display not defined in IE 8/9. */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary { display: block; }
+
+/** Correct `inline-block` display not defined in IE 8/9. */
+audio, canvas, video { display: inline-block; }
+
+/** Prevent modern browsers from displaying `audio` without controls. Remove excess height in iOS 5 devices. */
+audio:not([controls]) { display: none; height: 0; }
+
+/** Address styling not present in IE 8/9. */
+[hidden] { display: none; }
+
+/* ========================================================================== Base ========================================================================== */
+/** 1. Set default font family to sans-serif. 2. Prevent iOS text size adjust after orientation change, without disabling user zoom. */
+html { font-family: sans-serif; /* 1 */ -ms-text-size-adjust: 100%; /* 2 */ -webkit-text-size-adjust: 100%; /* 2 */ }
+
+/** Remove default margin. */
+body { margin: 0; }
+
+/* ========================================================================== Links ========================================================================== */
+/** Address `outline` inconsistency between Chrome and other browsers. */
+a:focus { outline: thin dotted; }
+
+/** Improve readability when focused and also mouse hovered in all browsers. */
+a:active, a:hover { outline: 0; }
+
+/* ========================================================================== Typography ========================================================================== */
+/** Address variable `h1` font-size and margin within `section` and `article` contexts in Firefox 4+, Safari 5, and Chrome. */
+h1 { font-size: 2em; margin: 0.67em 0; }
+
+/** Address styling not present in IE 8/9, Safari 5, and Chrome. */
+abbr[title] { border-bottom: 1px dotted; }
+
+/** Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome. */
+b, strong { font-weight: bold; }
+
+/** Address styling not present in Safari 5 and Chrome. */
+dfn { font-style: italic; }
+
+/** Address differences between Firefox and other browsers. */
+hr { -moz-box-sizing: content-box; box-sizing: content-box; height: 0; }
+
+/** Address styling not present in IE 8/9. */
+mark { background: #ff0; color: #000; }
+
+/** Correct font family set oddly in Safari 5 and Chrome. */
+code, kbd, pre, samp { font-family: monospace, serif; font-size: 1em; }
+
+/** Improve readability of pre-formatted text in all browsers. */
+pre { white-space: pre-wrap; }
+
+/** Set consistent quote types. */
+q { quotes: "\201C" "\201D" "\2018" "\2019"; }
+
+/** Address inconsistent and variable font size in all browsers. */
+small { font-size: 80%; }
+
+/** Prevent `sub` and `sup` affecting `line-height` in all browsers. */
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+
+sup { top: -0.5em; }
+
+sub { bottom: -0.25em; }
+
+/* ========================================================================== Embedded content ========================================================================== */
+/** Remove border when inside `a` element in IE 8/9. */
+img { border: 0; }
+
+/** Correct overflow displayed oddly in IE 9. */
+svg:not(:root) { overflow: hidden; }
+
+/* ========================================================================== Figures ========================================================================== */
+/** Address margin not present in IE 8/9 and Safari 5. */
+figure { margin: 0; }
+
+/* ========================================================================== Forms ========================================================================== */
+/** Define consistent border, margin, and padding. */
+fieldset { border: 1px solid #c0c0c0; margin: 0 2px; padding: 0.35em 0.625em 0.75em; }
+
+/** 1. Correct `color` not being inherited in IE 8/9. 2. Remove padding so people aren't caught out if they zero out fieldsets. */
+legend { border: 0; /* 1 */ padding: 0; /* 2 */ }
+
+/** 1. Correct font family not being inherited in all browsers. 2. Correct font size not being inherited in all browsers. 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome. */
+button, input, select, textarea { font-family: inherit; /* 1 */ font-size: 100%; /* 2 */ margin: 0; /* 3 */ }
+
+/** Address Firefox 4+ setting `line-height` on `input` using `!important` in the UA stylesheet. */
+button, input { line-height: normal; }
+
+/** Address inconsistent `text-transform` inheritance for `button` and `select`. All other form control elements do not inherit `text-transform` values. Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+. Correct `select` style inheritance in Firefox 4+ and Opera. */
+button, select { text-transform: none; }
+
+/** 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio` and `video` controls. 2. Correct inability to style clickable `input` types in iOS. 3. Improve usability and consistency of cursor style between image-type `input` and others. */
+button, html input[type="button"], input[type="reset"], input[type="submit"] { -webkit-appearance: button; /* 2 */ cursor: pointer; /* 3 */ }
+
+/** Re-set default cursor for disabled elements. */
+button[disabled], html input[disabled] { cursor: default; }
+
+/** 1. Address box sizing set to `content-box` in IE 8/9. 2. Remove excess padding in IE 8/9. */
+input[type="checkbox"], input[type="radio"] { box-sizing: border-box; /* 1 */ padding: 0; /* 2 */ }
+
+/** 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome. 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome (include `-moz` to future-proof). */
+input[type="search"] { -webkit-appearance: textfield; /* 1 */ -moz-box-sizing: content-box; -webkit-box-sizing: content-box; /* 2 */ box-sizing: content-box; }
+
+/** Remove inner padding and search cancel button in Safari 5 and Chrome on OS X. */
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration { -webkit-appearance: none; }
+
+/** Remove inner padding and border in Firefox 4+. */
+button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
+
+/** 1. Remove default vertical scrollbar in IE 8/9. 2. Improve readability and alignment in all browsers. */
+textarea { overflow: auto; /* 1 */ vertical-align: top; /* 2 */ }
+
+/* ========================================================================== Tables ========================================================================== */
+/** Remove most spacing between table cells. */
+table { border-collapse: collapse; border-spacing: 0; }
+
+/* Mixins are slightly modified from Benjamin Doherty's first implementations: http://gist.github.com/377912 rgba-background mixin can now be passed an option $dir variable
+*/
+/* Mixins are slightly modified from Benjamin Doherty's first implementations: http://gist.github.com/377912 rgba-background mixin can now be passed an option $dir variable
+*/
+.extJustify, .b-howto__algorithm, .b-scheme__algorithm { text-align: justify; line-height: 0; }
+.extJustify:after, .b-howto__algorithm:after, .b-scheme__algorithm:after { display: inline-block; content: ' '; overflow: hidden; width: 100%; height: 1px; }
+
+html { height: 100%; min-width: 954px; }
+
+body { position: relative; min-height: 100%; background: white url("../img/css/bg.jpg") center 0 repeat-x; color: #4d4d4d; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px; line-height: 18px; }
+
+#wrapper { display: none; overflow: hidden; position: relative; width: 100%; }
+
+input, textarea, th, td { padding: 0; }
+
+fieldset { padding: 0; margin: 0; border: none; }
+
+a { color: #e7642a; }
+a:hover { text-decoration: none; }
+
+button { cursor: pointer; }
+
+/* Mixins are slightly modified from Benjamin Doherty's first implementations: http://gist.github.com/377912 rgba-background mixin can now be passed an option $dir variable
+*/
+/******************************************************************************* header ******************************************************************************/
+.b-header { position: relative; width: 954px; height: 415px; margin: 0 auto; }
+
+.b-header__logo { width: 444px; height: 171px; display: block; background: url("../img/css/logo.png"); position: absolute; top: 107px; left: 260px; }
+
+/* Mixins are slightly modified from Benjamin Doherty's first implementations: http://gist.github.com/377912 rgba-background mixin can now be passed an option $dir variable
+*/
+/******************************************************************************* about ******************************************************************************/
+.i-about { position: relative; padding: 18px 0; background: #e7642a; z-index: 2; }
+.i-about:after { width: 90px; height: 68px; background: url('../img/css/sprites/misc-s25505e552f.png') 0 -846px no-repeat; content: ' '; display: block; position: absolute; bottom: -48px; left: 50%; margin-left: -45px; z-index: 3; }
+
+.b-about { -webkit-box-shadow: #8b3c19 0 0 29px; -moz-box-shadow: #8b3c19 0 0 29px; box-shadow: #8b3c19 0 0 29px; overflow: hidden; width: 874px; margin: 0 auto; padding: 30px 40px; background: #f5f5f5; border-bottom: 1px solid #a8a7a7; }
+
+.b-about__column { float: left; width: 420px; }
+.b-about__column:first-child { float: right; }
+.b-about__column .title { min-height: 54px; margin: 0 0 25px; font-size: 25px; line-height: 27px; }
+
+/******************************************************************************* authority ******************************************************************************/
+.b-authority { width: 882px; margin: 0 auto; padding: 40px 0; font-family: "Roboto", Verdana, Arial, Helvetica, sans-serif; font-weight: 300; text-align: center; }
+.b-authority p { margin: 40px 0; font-size: 20px; line-height: 24px; }
+.b-authority .advantages { color: gray; line-height: 33px; }
+.b-authority .call { color: #e7642a; font-size: 36px; line-height: 42px; }
+
+/******************************************************************************* defenders ******************************************************************************/
+.b-defenders { width: 882px; margin: 0 auto; padding: 75px 0 70px; }
+
+.b-defenders__list { margin: 0; padding: 0; list-style: none; width: 865px; }
+.b-defenders__list .item { position: relative; margin-top: 60px; padding-left: 236px; font-family: "Roboto", Verdana, Arial, Helvetica, sans-serif; font-size: 22px; font-weight: 300; line-height: 24px; }
+.b-defenders__list .item__city { font-size: 18px; }
+.b-defenders__list .item__img { position: absolute; top: 0; left: 100px; }
+.b-defenders__list .item__msg { font-weight: 500; line-height: 27px; }
+
+/******************************************************************************* howto ******************************************************************************/
+.b-howto { width: 882px; margin: 0 auto; padding: 105px 0; }
+
+.b-howto__algorithm { margin: 0; padding: 0; list-style: none; overflow: hidden; }
+.b-howto__algorithm .item { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; display: inline-block; width: 230px; font-size: 14px; line-height: 23px; text-align: center; vertical-align: top; }
+.b-howto__algorithm .item__step { width: 106px; height: 105px; background: url('../img/css/sprites/misc-s25505e552f.png') 0 -292px no-repeat; margin: 70px auto; color: #000; font-family: "Roboto", Verdana, Arial, Helvetica, sans-serif; font-size: 58px; line-height: 100px; text-align: center; }
+
+/******************************************************************************* map ******************************************************************************/
+.i-map { background: url("../img/css/map.jpg") center 22px no-repeat; border-bottom: 1px solid #c7c7c7; }
+
+.b-map { position: relative; width: 882px; height: 303px; margin: 0 auto; }
+
+.b-map__pin { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; position: absolute; }
+
+.b-map__pin_1 { top: 43px; left: 115px; }
+
+.b-map__pin_2 { top: 53px; left: 205px; }
+
+.b-map__pin_3 { top: 3px; left: 355px; }
+
+.b-map__pin_4 { top: 20px; left: 495px; }
+
+.b-map__pin_5 { top: -7px; left: 625px; }
+
+.b-map__pin_6 { top: 53px; left: 690px; }
+
+/******************************************************************************* mobile ******************************************************************************/
+.b-mobile { padding: 80px 0 30px; font-family: "Roboto", Verdana, Arial, Helvetica, sans-serif; font-size: 20px; font-weight: 300; line-height: 24px; text-align: center; }
+.b-mobile p { width: 882px; margin: 45px auto; }
+.b-mobile .b-title { width: 882px; margin: 0 auto; }
+
+.i-mobile__phones { height: 158px; margin: 130px 0; background: #e7642a; }
+
+.b-mobile__phones { position: relative; width: 882px; margin: 0 auto; }
+.b-mobile__phones .mobile1 { position: absolute; top: -90px; left: 100px; }
+.b-mobile__phones .mobile2 { position: absolute; top: -75px; right: 220px; }
+
+.b-mobile__downloads { display: inline-block; -webkit-border-radius: 3px; -moz-border-radius: 3px; -ms-border-radius: 3px; -o-border-radius: 3px; border-radius: 3px; overflow: hidden; padding: 6px 4px; background: #000; }
+.b-mobile__downloads .ext_d5761399ec360a0f84, .b-mobile__downloads .android, .b-mobile__downloads .iphone, .b-mobile__downloads .windows { width: 121px; height: 46px; background: url('../img/css/sprites/misc-s25505e552f.png') 0 0 no-repeat; display: block; float: left; margin: 0 2px; }
+.b-mobile__downloads .android { background-position: 0 0; }
+.b-mobile__downloads .iphone { background-position: 0 -700px; }
+.b-mobile__downloads .windows { background-position: 0 -146px; }
+
+/******************************************************************************* scheme ******************************************************************************/
+.i-scheme { -webkit-box-shadow: inset #5c2811 0 0 15px; -moz-box-shadow: inset #5c2811 0 0 15px; box-shadow: inset #5c2811 0 0 15px; position: relative; padding: 40px 0 48px; background: #e7642a; border-bottom: 1px solid #c7c7c7; z-index: 2; }
+.i-scheme:after { width: 72px; height: 45px; background: url('../img/css/sprites/misc-s25505e552f.png') 0 -1402px no-repeat; content: ' '; display: block; position: absolute; bottom: -36px; left: 50%; margin-left: -36px; z-index: 2; }
+
+.b-scheme { width: 882px; margin: 0 auto; color: #fff; font-size: 17px; line-height: 21px; text-align: center; }
+.b-scheme .b-title .wrapper:before { background: #b95022; border-color: #ec8355; }
+.b-scheme .b-title .wrapper:after { background: #b95022; border-color: #ec8355; }
+.b-scheme .sayIt { -webkit-box-shadow: inset #2c1308 0 0 5px; -moz-box-shadow: inset #2c1308 0 0 5px; box-shadow: inset #2c1308 0 0 5px; text-shadow: white 0 1px 0; display: inline-block; margin-top: 30px; padding: 8px; background: #ae4b20; color: #454545; font-size: 21px; font-family: "Roboto", Verdana, Arial, Helvetica, sans-serif; line-height: 23px; text-decoration: none; }
+.b-scheme .sayIt:hover { color: #494949; }
+.b-scheme .sayIt:hover .sayIt__wrapper { background: #f3f3f3; border-color: transparent; }
+.b-scheme .sayIt:active { color: #303030; }
+.b-scheme .sayIt:active .sayIt__wrapper { -webkit-box-shadow: inset #282828 0 2px 3px; -moz-box-shadow: inset #282828 0 2px 3px; box-shadow: inset #282828 0 2px 3px; background: #a1a1a1; }
+.b-scheme .sayIt__wrapper { -webkit-box-shadow: #602912 0 0 5px; -moz-box-shadow: #602912 0 0 5px; box-shadow: #602912 0 0 5px; display: block; width: 428px; padding: 15px 0; background: #e5e5e5; border: 1px solid #bababa; border-top: none; }
+
+.b-scheme__algorithm { padding: 0; list-style: none; margin: 60px 0 40px; }
+.b-scheme__algorithm .item { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; display: inline-block; padding-top: 140px; background: url('../img/css/sprites/misc-s25505e552f.png') 0 -1014px no-repeat; font-family: Georgia, "Times New Roman", Times, serif; font-size: 17px; text-align: center; vertical-align: top; }
+.b-scheme__algorithm .item_problem { background-position: 0 -1014px; width: 236px; }
+.b-scheme__algorithm .item_say { background-position: 0 -497px; width: 157px; }
+.b-scheme__algorithm .item_resolve { background-position: 0 -1208px; width: 236px; }
+.b-scheme__algorithm .item_next { background-position: 0 -1650px; text-indent: -999px; overflow: hidden; width: 74px; }
+
+/******************************************************************************* support ******************************************************************************/
+.i-support { -webkit-box-shadow: inset lightgrey 0 0 6px; -moz-box-shadow: inset lightgrey 0 0 6px; box-shadow: inset lightgrey 0 0 6px; position: relative; padding: 40px 0; background: #f8f8f8; border-top: 1px solid #d8d8d8; border-bottom: 1px solid #d8d8d8; z-index: 2; }
+.i-support:after { width: 72px; height: 43px; background: url('../img/css/sprites/misc-s25505e552f.png') 0 -1547px no-repeat; content: ' '; display: block; position: absolute; bottom: -37px; left: 50%; margin-left: -36px; z-index: 2; }
+
+.b-support { width: 882px; margin: 0 auto; text-align: center; }
+.b-support .b-title { margin-bottom: 34px; }
+.b-support .item { display: inline-block; margin: 17px 65px 0; vertical-align: top; }
+
+/******************************************************************************* title ******************************************************************************/
+.b-title { overflow: hidden; width: 100%; margin: 0; font-family: "Roboto", Verdana, Arial, Helvetica, sans-serif; font-size: 44px; font-weight: 300; line-height: 1em; text-align: center; }
+.b-title .wrapper { display: inline-block; position: relative; }
+.b-title .wrapper:before { content: ' '; display: block; position: absolute; top: 22px; right: -969px; width: 954px; height: 1px; border-bottom: 1px solid #cccccc; }
+.b-title .wrapper:after { content: ' '; display: block; position: absolute; top: 22px; left: -969px; width: 954px; height: 1px; border-bottom: 1px solid #cccccc; }
+
+/******************************************************************************* together ******************************************************************************/
+.b-together { -webkit-box-shadow: inset rgba(0, 0, 0, 0.3) 0 0 15px; -moz-box-shadow: inset rgba(0, 0, 0, 0.3) 0 0 15px; box-shadow: inset rgba(0, 0, 0, 0.3) 0 0 15px; opacity: 0; position: relative; height: 479px; padding-top: 40px; background: url("../img/css/panorama.jpg") center 0; color: #fff; }
+.b-together .b-title { width: 882px; margin: 0 auto; }
+.b-together .b-title .wrapper:before { background: #65a0d1; border-color: #81c1f1; }
+.b-together .b-title .wrapper:after { background: #65a0d1; border-color: #81c1f1; }
+
+.b-together__overlay { background: transparent url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGoAAAAkCAMAAABWrV+5AAABa1BMVEX///8HDAQNDgMOFgQRFgUYIQQcJQUdHwceGAdYUxMKDQIeHwgEBgMHBwMLEAMRFAIUGAYjJAc8OxATFAgbHgoVGAgWGgkOEgMSGQcUFgUUHQQYHwgoJwMQHgMUGgQyOwEZGwIhJQMtOQE0OgMVFgMZFgUyOAUKCgUVGQQLDwQTFwMwOQEbHwRrbWdtb2ZnamZ0dmZ5eGlycmZ4e2ZwcGZ/gmhyc2Z8fGh0c2iGg2eHh2d0dmp6emlsbGdpamhqamZqa2ZvcGZqamZqbWZycmd9fmZ8emZ+emd6emZ8fWeKjWlwcWhzcmaBfGqEf2qRi29naWRoamZmZmZqbWZyd2dqa2ZvcWZ5empmZ2aDgmprbWZsbGZ6eGeIhGp/fmpmZmZnaWZoamZucGdrbGdubmlrbGdqbGdvcmhqa2hvcWdydGZqbGZub2lpamZpamZydGZ2eWZ1eWZ3eGZ4eWprbGT////////Hx8f////AyLYNAAAAd3RSTlMAAwMDAwMDAwMDBAUGBgYGBgYGBwcICQoKCgoKCgsLDA0NDg8RERwiIiwzM0piYmNjY2VlZ2doaWpra21tbm9wcHBxcnNzdXV2d3h5eXt7fH2en6Cho6Wnqamqq6ytrq+xs7W2tre4ubq7vL7AwcLCw8TFxuv9/uW5Fj0AAAFISURBVEjHrc3TckRRFEXRG9u2bdu2bduan59UKpVK+nan9z4n832t4bx59lxdVVlRVl5aUpzvWDTvOnZw9VTk2Dfn/vVC8VhoLc0go3gosJRmkVLc51lJ08gp7nIspCk0FLe5xtIkOoqbNENpAi3FdaaRNI6e4irdQBrDhOIyWy2NYkZxkaWURjClOM9QScOYU5ylKqQhbChOU8TSIHYUJ8lCaQBbiuMkkdSHPcVRvEDqf/0PisM4v1Kvf0lEcRDrR+oRSDKK/eg/pS6JJKTYi/lD6hZJUordBJ9Sp0wSU+wk+pA6hJKcYjvKq9QulRQUW5FepDaxpKHYDHBJrXJJRbEe7iE1KyQdxUbEL6lFIykp1sJ+SE0qSUuxGvItNeokNcVK4JfUoJT0FMuhn1K9VjKgWAr6kGrUkgnFYrBTq5eMKBbqXgxW70bQptZuWSHzAAAAAElFTkSuQmCC') center 0 no-repeat; overflow: hidden; position: absolute; bottom: 0; left: 0; width: 100%; height: 36px; }
+.b-together__overlay .left, .b-together__overlay .right { position: absolute; top: 0; width: 50%; height: 100%; background: #fff; border-top: 1px solid #c7c7c7; }
+.b-together__overlay .left { left: -36px; }
+.b-together__overlay .right { right: -36px; }
+
+/******************************************************************************* whoWeAre ******************************************************************************/
+.i-whoWeAre { -webkit-box-shadow: inset lightgrey 0 0 6px; -moz-box-shadow: inset lightgrey 0 0 6px; box-shadow: inset lightgrey 0 0 6px; padding: 80px 0 110px; background: #f8f8f8; border-top: 1px solid #d8d8d8; border-bottom: 1px solid #d8d8d8; }
+
+.b-whoWeAre { width: 882px; margin: 0 auto; text-align: center; }
+.b-whoWeAre p { font-family: "Roboto", Verdana, Arial, Helvetica, sans-serif; font-size: 20px; font-weight: 300; line-height: 24px; }
+.b-whoWeAre .b-title { margin-bottom: 45px; }
+
+.i-whoWeAre__photo { width: 743px; margin: 0 auto; padding: 11px; background: #fff; border: 1px solid #c0c0c0; }
+.i-whoWeAre__photo .boundingBox { overflow: hidden; position: relative; height: 185px; background: #cfcfcf; }
+
+.b-whoWeAre__photo { overflow: hidden; position: relative; left: 0; width: 1999px; line-height: 185px; text-align: left; }
+.b-whoWeAre__photo img { display: inline-block; margin: 0 20px; vertical-align: middle; }
+
+.b-whoWeAre__thumbs { overflow: hidden; position: relative; width: 543px; height: 57px; margin: 60px auto 0; }
+.b-whoWeAre__thumbs img { display: block; }
+.b-whoWeAre__thumbs .frame { position: absolute; top: 0; left: 0; width: 264px; height: 49px; border: 4px solid #b0b0b0; cursor: move; z-index: 2; }
+
+/******************************************************************************* work ******************************************************************************/
+.b-work { position: relative; width: 882px; margin: 0 auto; padding-top: 80px; }
+
+.b-work__comments { padding: 0; list-style: none; overflow: hidden; position: relative; left: 0; width: 9999px; margin: 60px 0 50px; }
+.b-work__comments p { margin: 20px 0; }
+.b-work__comments .item { float: left; position: relative; width: 565px; padding-left: 215px; }
+.b-work__comments .item__img { position: absolute; top: 0; left: 86px; }
+.b-work__comments .item__author, .b-work__comments .item__date { font-family: "Roboto", Verdana, Arial, Helvetica, sans-serif; font-weight: 300; font-size: 22px; line-height: 24px; }
+.b-work__comments .item__date { font-size: 18px; }
+.b-work__comments .item__title { margin: 25px 0 20px; font-family: "Roboto", Verdana, Arial, Helvetica, sans-serif; font-size: 22px; font-weight: 500; line-height: 27px; }
+.b-work__comments .item__result { float: left; margin: 1px; font-size: 14px; line-height: 24px; }
+.b-work__comments .item__result img { display: block; }
+
+.b-work__scrollbar { *zoom: 1; filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFCBCBCB', endColorstr='#FFE3E3E3'); -webkit-border-radius: 2px; -moz-border-radius: 2px; -ms-border-radius: 2px; -o-border-radius: 2px; border-radius: 2px; position: relative; left: -34px; width: 950px; height: 4px; }
+.b-work__scrollbar .handler { *zoom: 1; filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFE7642A', endColorstr='#FFCD5925'); -webkit-border-radius: 2px; -moz-border-radius: 2px; -ms-border-radius: 2px; -o-border-radius: 2px; border-radius: 2px; position: relative; top: 0; left: 0; width: 300px; height: 4px; }
+
+/* Mixins are slightly modified from Benjamin Doherty's first implementations: http://gist.github.com/377912 rgba-background mixin can now be passed an option $dir variable
+*/
+/******************************************************************************* footer ******************************************************************************/
+.i-footer { background: #2d2d2d; color: #fff; }
+
+.b-footer { position: relative; width: 954px; height: 40px; margin: 0 auto; font-size: 12px; line-height: 40px; }
+.b-footer .divider { display: inline-block; margin: 0 25px; }
+
+.b-footer__search { position: absolute; top: 7px; right: 0; }
+.b-footer__search input { display: block; width: 180px; height: 25px; padding: 0 10px; background: #fff; border: none; border-top: 1px solid #858585; border-right: 1px solid #cbcbcb; font-size: 12px; }
+
+/******************************************************************************* global rules ******************************************************************************/
+.g-hidden { display: none; }
+
+.g-invisible { display: block; position: absolute; left: -9999px; top: -9999px; visibility: hidden; }
+
+/* clearfix */
+.cf { position: relative; display: table; }
+.cf.operaFix100 { width: 100%; }
+
+.cf:after { content: '. .'; display: block; word-spacing: 99in; height: 0; overflow: hidden; /* Opera bugfix*/ font-size: 0.05em; line-height: 0.05em; }

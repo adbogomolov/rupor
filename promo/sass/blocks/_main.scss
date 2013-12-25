@@ -1,0 +1,727 @@
+@import "../_base/base";
+//@import "_extend.scss"; // TODO: for production - remove duplicate
+
+/*******************************************************************************
+ * about
+ *******************************************************************************/
+.i-about {
+    position: relative;
+    padding: 18px 0;
+    background: $colorTheme;
+    z-index: 2;
+
+    @include ie-after {
+        @include spriteWithDimensions($spriteMisc, about_nozzle);
+        content: ' ';
+        display: block;
+        position: absolute;
+        bottom: -48px;
+        left: 50%;
+        margin-left: -45px;
+        z-index: 3;
+    }
+}
+
+.b-about {
+    @include my-box-shadow(getHex(#000, .4, $colorTheme) 0 0 29px);
+    overflow: hidden;
+    width: $containerWidth - 80;
+    margin: 0 auto;
+    padding: 30px 40px;
+    background: #f5f5f5;
+    border-bottom: 1px solid #a8a7a7;
+}
+
+.b-about__column {
+    float: left;
+    width: 420px;
+
+    &:first-child {
+        float: right;
+    }
+
+    .title {
+        min-height: 54px;
+        margin: 0 0 25px;
+        font-size: 25px;
+        line-height: 27px;
+    }
+}
+
+/*******************************************************************************
+ * authority
+ *******************************************************************************/
+.b-authority {
+    width: $insideWidth;
+    margin: 0 auto;
+    padding: 40px 0;
+    font-family: $fontLight;
+    font-weight: 300;
+    text-align: center;
+
+    p {
+        margin: 40px 0;
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    .advantages {
+        color: getHex(#000, .5);
+        line-height: 33px;
+    }
+
+    .call {
+        color: $colorTheme;
+        font-size: 36px;
+        line-height: 42px;
+    }
+}
+
+/*******************************************************************************
+ * defenders
+ *******************************************************************************/
+.b-defenders {
+    width: $insideWidth;
+    margin: 0 auto;
+    padding: 75px 0 70px;
+}
+
+.b-defenders__list {
+    @include my-resetList;
+    width: 865px;
+
+    .item {
+        position: relative;
+        margin-top: 60px;
+        padding-left: 236px;
+        font-family: $fontLight;
+        font-size: 22px;
+        font-weight: 300;
+        line-height: 24px;
+    }
+
+    .item__city {
+        font-size: 18px;
+    }
+
+    .item__img {
+        position: absolute;
+        top: 0;
+        left: 100px;
+    }
+
+    .item__msg {
+        font-weight: 500;
+        line-height: 27px;
+    }
+}
+
+/*******************************************************************************
+ * howto
+ *******************************************************************************/
+.b-howto {
+    width: $insideWidth;
+    margin: 0 auto;
+    padding: 105px 0;
+}
+
+.b-howto__algorithm {
+    @include my-resetList;
+    @extend .extJustify;
+    overflow: hidden;
+
+    .item {
+        @if $ie > 8 {
+            @include opacity(0);
+        } @else {
+            visibility: hidden;
+        }
+        @include ie-inlineBlock;
+        width: 230px;
+        font-size: 14px;
+        line-height: 23px;
+        text-align: center;
+        vertical-align: top;
+    }
+
+    .item__step {
+        @include spriteWithDimensions($spriteMisc, step);
+        margin: 70px auto;
+        color: #000;
+        font-family: $fontLight;
+        font-size: 58px;
+        line-height: 100px;
+        text-align: center;
+
+        // IE fix png aplha channel
+        @if $ie < 9 {
+            //$filename: sprite-url($spriteMisc);
+            //background-image: url($filename);
+            //background: transparent;
+            //-ms-filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=#{$filename},sizingMethod='crop');
+            //filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=#{$filename},sizingMethod='crop');
+        }
+    }
+}
+
+/*******************************************************************************
+ * map
+ *******************************************************************************/
+.i-map {
+    background: url('../img/css/map.jpg') center 22px no-repeat;
+    border-bottom: 1px solid #c7c7c7;
+}
+
+.b-map {
+    position: relative;
+    width: $insideWidth;
+    height: 303px;
+    margin: 0 auto;
+}
+
+.b-map__pin {
+    @if $ie > 8 {
+        @include opacity(0);
+    } @else {
+        visibility: hidden
+    }
+    position: absolute;
+}
+
+.b-map__pin_1 {
+    top: 43px;
+    left: 115px;
+}
+
+.b-map__pin_2 {
+    top: 53px;
+    left: 205px;
+}
+
+.b-map__pin_3 {
+    top: 3px;
+    left: 355px;
+}
+
+.b-map__pin_4 {
+    top: 20px;
+    left: 495px;
+}
+
+.b-map__pin_5 {
+    top: -7px;
+    left: 625px;
+}
+
+.b-map__pin_6 {
+    top: 53px;
+    left: 690px;
+}
+
+/*******************************************************************************
+ * mobile
+ *******************************************************************************/
+.b-mobile {
+    padding: 80px 0 30px;
+    font-family: $fontLight;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 24px;
+    text-align: center;
+
+    p {
+        width: $insideWidth;
+        margin: 45px auto;
+    }
+
+    .b-title {
+        width: $insideWidth;
+        margin: 0 auto;
+    }
+}
+
+.i-mobile__phones {
+    height: 158px;
+    margin: 130px 0;
+    background: $colorTheme;
+}
+
+.b-mobile__phones {
+    position: relative;
+    width: $insideWidth;
+    margin: 0 auto;
+
+    .mobile1 {
+        position: absolute;
+        top: -90px;
+        left: 100px;
+    }
+
+    .mobile2 {
+        position: absolute;
+        top: -75px;
+        right: 220px;
+    }
+}
+
+.b-mobile__downloads {
+    @include ie-inlineBlock;
+    @include my-border-radius(3px);
+    overflow: hidden;
+    padding: 6px 4px;
+    background: #000;
+
+    $list: android iphone windows;
+
+    $rand: getRandomString();
+    .ext_#{$rand} {
+        @include spriteWithDimensions($spriteMisc, btn_android);
+        display: block;
+        float: left;
+        margin: 0 2px;
+    }
+    @each $item in $list {
+        .#{$item} { @extend .ext_#{$rand}; }
+        .#{$item} {
+            @include sprite($spriteMisc, btn_#{$item});
+        }
+    }
+}
+
+/*******************************************************************************
+ * scheme
+ *******************************************************************************/
+.i-scheme {
+    @include my-box-shadow(inset getHex(#000, .6, $colorTheme) 0 0 15px);
+    position: relative;
+    padding: 40px 0 48px;
+    background: $colorTheme;
+    border-bottom: 1px solid #c7c7c7;
+    z-index: 2;
+
+    @include ie-after {
+        @include spriteWithDimensions($spriteMisc, scheme_nozzle);
+        content: ' ';
+        display: block;
+        position: absolute;
+        bottom: -36px;
+        left: 50%;
+        margin-left: -36px;
+        z-index: 2;
+    }
+}
+
+.b-scheme {
+    width: $insideWidth;
+    margin: 0 auto;
+    color: #fff;
+    font-size: 17px;
+    line-height: 21px;
+    text-align: center;
+
+    .b-title {
+        .wrapper {
+            @include ie-before {
+                background: #b95022;
+                border-color: #ec8355;
+            }
+            @include ie-after {
+                background: #b95022;
+                border-color: #ec8355;
+            }
+        }
+    }
+
+    .sayIt {
+        @include my-box-shadow(inset getHex(#000, .75, #ae4b20) 0 0 5px);
+        @include text-shadow(#fff 0 1px 0);
+        display: inline-block;
+        margin-top: 30px;
+        padding: 8px;
+        background: #ae4b20;
+        color: getHex(#000, .7, #e5e5e5);
+        font-size: 21px;
+        font-family: $fontLight;
+        line-height: 23px;
+        text-decoration: none;
+
+        &:hover {
+            color: getHex(#000, .7, #f3f3f3);
+
+            .sayIt__wrapper {
+                background: #f3f3f3;
+                border-color: transparent;
+            }
+        }
+
+        &:active {
+            color: getHex(#000, .7, #a1a1a1);
+
+            .sayIt__wrapper {
+                @include my-box-shadow(inset getHex(#000, .75, #a1a1a1) 0 2px 3px);
+                background: #a1a1a1;
+            }
+        }
+    }
+
+    .sayIt__wrapper {
+        @include my-box-shadow(getHex(#000, .45, #ae4b20) 0 0 5px);
+        display: block;
+        width: 428px;
+        padding: 15px 0;
+        background: #e5e5e5;
+        border: 1px solid #bababa;
+        border-top: none;
+    }
+}
+
+.b-scheme__algorithm {
+    @include my-resetList($m: false);
+    @extend .extJustify;
+    margin: 60px 0 40px;
+
+    .item {
+        @if $ie > 8 {
+            @include opacity(0);
+        } @else {
+            visibility: hidden
+        }
+        @include ie-inlineBlock;
+        padding-top: 140px;
+        background: sprite($spriteMisc, scheme_problem) no-repeat;
+        font-family: $fontTimes;
+        font-size: 17px;
+        text-align: center;
+        vertical-align: top;
+    }
+
+    $list: problem say resolve next;
+
+    @each $item in $list {
+        .item_#{$item} {
+            @if $item == 'next' {
+                @include sprite($spriteMisc, scheme_#{$item}, false, 0, 40);
+                text-indent: -999px;
+                overflow: hidden;
+            } @else {
+                @include sprite($spriteMisc, scheme_#{$item});
+            }
+            width: getSpriteItemWidth($spriteMisc, scheme_#{$item});
+        }
+    }
+}
+
+/*******************************************************************************
+ * support
+ *******************************************************************************/
+.i-support {
+    @include my-box-shadow(inset getHex(#000, .15, #f8f8f8) 0 0 6px);
+    position: relative;
+    padding: 40px 0;
+    background: #f8f8f8;
+    border-top: 1px solid #d8d8d8;
+    border-bottom: 1px solid #d8d8d8;
+    z-index: 2;
+
+    @include ie-after {
+        @include spriteWithDimensions($spriteMisc, support_nozzle);
+        content: ' ';
+        display: block;
+        position: absolute;
+        bottom: -37px;
+        left: 50%;
+        margin-left: -36px;
+        z-index: 2;
+    }
+}
+
+.b-support {
+    width: $insideWidth;
+    margin: 0 auto;
+    text-align: center;
+
+    .b-title {
+        margin-bottom: 34px;
+    }
+
+    .item {
+        display: inline-block;
+        margin: 17px 65px 0;
+        vertical-align: top;
+    }
+}
+
+/*******************************************************************************
+ * title
+ *******************************************************************************/
+.b-title {
+    overflow: hidden;
+    width: 100%;
+    margin: 0;
+    font-family: $fontLight;
+    font-size: 44px;
+    font-weight: 300;
+    line-height: 1em;
+    text-align: center;
+
+    .wrapper {
+        display: inline-block;
+        position: relative;
+
+        @include ie-before {
+            content: ' ';
+            display: block;
+            position: absolute;
+            top: 22px;
+            right: -($containerWidth + 15);
+            width: $containerWidth;
+            height: 1px;
+            border-bottom: 1px solid getHex(#000, .2);
+        }
+
+        @include ie-after {
+            content: ' ';
+            display: block;
+            position: absolute;
+            top: 22px;
+            left: -($containerWidth + 15);
+            width: $containerWidth;
+            height: 1px;
+            border-bottom: 1px solid getHex(#000, .2);
+        }
+    }
+}
+
+/*******************************************************************************
+ * together
+ *******************************************************************************/
+.b-together {
+    @include my-box-shadow(inset rgba(#000, .3) 0 0 15px);
+    @include ie-opacity(0);
+    position: relative;
+    height: 519px - 40;
+    padding-top: 40px;
+    background: url('../img/css/panorama.jpg') center 0;
+    color: #fff;
+
+    .b-title {
+        width: 882px;
+        margin: 0 auto;
+
+        .wrapper {
+            @include ie-before {
+                background: #65a0d1;
+                border-color: #81c1f1;
+            }
+            @include ie-after {
+                background: #65a0d1;
+                border-color: #81c1f1;
+            }
+        }
+    }
+}
+
+.b-together__overlay {
+    @include base64(together_nozzle, center 0 no-repeat);
+    overflow: hidden;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 36px;
+
+    .left, .right {
+        position: absolute;
+        top: 0;
+        width: 50%;
+        height: 100%;
+        background: #fff;
+        border-top: 1px solid #c7c7c7;
+    }
+
+    .left {
+        left: -36px;
+
+        @if $ie < 8 {
+            left: 0;
+        }
+    }
+
+    .right {
+        right: -36px;
+
+        @if $ie < 8 {
+            right: 0;
+        }
+    }
+}
+
+/*******************************************************************************
+ * whoWeAre
+ *******************************************************************************/
+.i-whoWeAre {
+    @include my-box-shadow(inset getHex(#000, .15, #f8f8f8) 0 0 6px);
+    padding: 80px 0 110px;
+    background: #f8f8f8;
+    border-top: 1px solid #d8d8d8;
+    border-bottom: 1px solid #d8d8d8;
+}
+
+.b-whoWeAre {
+    width: $insideWidth;
+    margin: 0 auto;
+    text-align: center;
+
+    p {
+        font-family: $fontLight;
+        font-size: 20px;
+        font-weight: 300;
+        line-height: 24px;
+    }
+
+    .b-title {
+        margin-bottom: 45px;
+    }
+}
+
+.i-whoWeAre__photo {
+    width: 765px - 22;
+    margin: 0 auto;
+    padding: 11px;
+    background: #fff;
+    border: 1px solid #c0c0c0;
+
+    .boundingBox {
+        overflow: hidden;
+        position: relative;
+        height: 185px;
+        background: #cfcfcf;
+    }
+}
+
+.b-whoWeAre__photo {
+    overflow: hidden;
+    position: relative;
+    left: 0;
+    width: 1999px;
+    line-height: 185px;
+    text-align: left;
+
+    img {
+        display: inline-block;
+        margin: 0 20px;
+        vertical-align: middle;
+    }
+}
+
+.b-whoWeAre__thumbs {
+    overflow: hidden;
+    position: relative;
+    width: 543px;
+    height: 57px;
+    margin: 60px auto 0;
+
+    img {
+        display: block;
+    }
+
+    .frame {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 272px - 8;
+        height: 57px - 8;
+        border: 4px solid #b0b0b0;
+        cursor: move;
+        z-index: 2;
+
+        @if $ie < 9 {
+            background: url('../img/css/ie/transparent.png');
+        }
+    }
+}
+
+/*******************************************************************************
+ * work
+ *******************************************************************************/
+.b-work {
+    position: relative;
+    width: $insideWidth;
+    margin: 0 auto;
+    padding-top: 80px;
+}
+
+.b-work__comments {
+    @include my-resetList($m:false);
+    overflow: hidden;
+    position: relative;
+    left: 0;
+    width: 9999px;
+    margin: 60px 0 50px;
+
+    p {
+        margin: 20px 0;
+    }
+
+    .item {
+        float: left;
+        position: relative;
+        width: 780px - 215;
+        padding-left: 215px;
+    }
+
+    .item__img {
+        position: absolute;
+        top: 0;
+        left: 86px;
+    }
+
+    .item__author, .item__date {
+        font-family: $fontLight;
+        font-weight: 300;
+        font-size: 22px;
+        line-height: 24px;
+    }
+
+    .item__date {
+        font-size: 18px;
+    }
+
+    .item__title {
+        margin: 25px 0 20px;
+        font-family: $fontLight;
+        font-size: 22px;
+        font-weight: 500;
+        line-height: 27px;
+    }
+
+    .item__result {
+        float: left;
+        margin: 1px;
+        font-size: 14px;
+        line-height: 24px;
+
+        img {
+            display: block;
+        }
+    }
+}
+
+.b-work__scrollbar {
+    @include my-linear-gradient(#cbcbcb, #e3e3e3);
+    @include my-border-radius(2px);
+    position: relative;
+    left: -34px;
+    width: 950px;
+    height: 4px;
+    
+    .handler {
+        @include my-linear-gradient(#e7642a, #cd5925);
+        @include my-border-radius(2px);
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 300px;
+        height: 4px;
+    }
+}
